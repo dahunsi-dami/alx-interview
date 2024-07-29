@@ -23,14 +23,16 @@ def pascal_triangle(n):
     triangle = [[1]]
 
     # Use a single loop for complexity sake
-    for i in range (1, n):
+    for i in range(1, n):
         backrow = triangle[i - 1]
-        
+
         # Set 1st element of current row to 1 always
         row = [1]
 
         # Fill in values in 'row' with list comprehension
-        row.extend([backrow[j] + backrow[j + 1] for j in range(len(backrow) - 1)])
+        row.extend(
+            [backrow[j] + backrow[j + 1] for j in range(len(backrow) - 1)]
+        )
 
         # End 'row' with 1 always
         row.append(1)
