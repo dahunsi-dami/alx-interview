@@ -26,7 +26,7 @@ def validUTF8(data):
             if byte_count == 0:
                 continue
 
-            # Return False if byteber of bytes is invalid.
+            # Return False if count of bytes is invalid.
             if byte_count == 1 or byte_count > 4:
                 return False
         else:
