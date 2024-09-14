@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """2D Matrix 90 degree clockwise implementation."""
 
 
