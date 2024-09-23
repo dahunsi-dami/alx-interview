@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""Module to solve coin change probelm w/ dynamic programming."""
+
 
 def makeChange(coins, total):
+    """Calculates fewest coins needed to make total."""
     if total <= 0:
         return 0
 
