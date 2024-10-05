@@ -14,7 +14,7 @@ def isWinner(x, nums):
 
     for i in range(2, int(max_num ** 0.5) + 1):
         if sieve[i]:
-            for j in range(i * 1, max_num + 1, 1):
+            for j in range(i * i, max_num + 1, i):
                 sieve[j] = False
 
     prime_kaunts = [0] * (max_num + 1)
@@ -35,4 +35,4 @@ def isWinner(x, nums):
     elif ben_win > maria_win:
         return "Ben"
     else:
-        return NOne
+        return None
