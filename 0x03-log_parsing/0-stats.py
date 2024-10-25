@@ -46,6 +46,10 @@ signal.signal(signal.SIGINT, signal_handler)
 try:
     for line in sys.stdin:
         match = log_pattern.match(line)
+
+        if not match:
+            continue
+
         if match:
             ip, date, status_code, file_size = match.groups()
 
