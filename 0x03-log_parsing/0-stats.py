@@ -50,19 +50,19 @@ try:
         if not match:
             continue
 
-        ip, date, status_code, _unused, file_size = match.groups()
+        if match:
+            ip, date, status_code, file_size = match.groups()
 
-        if file_size and file_size.isdigit():
             total_size += int(file_size)
 
-        status_code = int(status_code)
-        if status_code in status_codes_count:
-            status_codes_count[status_code] += 1
+            status_code = int(status_code)
+            if status_code in status_codes_count:
+                status_codes_count[status_code] += 1
 
-        line_count += 1
+            line_count += 1
 
-        if line_count % 10 == 0:
-            print_stats()
+            if line_count % 10 == 0:
+                print_stats()
 except Exception as e:
     sys.stderr.write(f"Error: {e}\n")
 finally:
