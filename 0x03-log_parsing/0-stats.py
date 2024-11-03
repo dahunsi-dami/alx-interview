@@ -8,20 +8,20 @@ import signal
 
 total_size = 0
 status_codes_count = {
-    200: 0,
-    301: 0,
-    400: 0,
-    401: 0,
-    403: 0,
-    404: 0,
-    405: 0,
-    500: 0
-}
+        200: 0,
+        301: 0,
+        400: 0,
+        401: 0,
+        403: 0,
+        404: 0,
+        405: 0,
+        500: 0
+        }
 line_count = 0
 
 log_pattern = re.compile(
-        r'^(\S+) - \[(.*?)\] "GET /projects/260 HTTP/1.1" (\d{3})(?: (.*?))? (\d+)?$'
-)
+        r'^(\S+) - \[(.*?)\] "GET /projects/260 HTTP/1.1" (\d{3}) (\d+)$'
+        )
 
 
 def print_stats():
